@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="0xLoKi">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>HIT OS: Operating System - 通识自学指南(CS版)</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "HIT OS: Operating System";
+    var mkdocs_page_input_path = "\u64cd\u4f5c\u7cfb\u7edf/HITOS.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> 通识自学指南(CS版)</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../..">前言</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">如何使用这本书</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/">一个仅供参考的CS学习规划</a>
+  </li>
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Home</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">必学工具</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/%E7%BF%BB%E5%A2%99/">翻墙</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Vim/">Vim</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Emacs/">Emacs</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Git/">Git</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/GitHub/">GitHub</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/GNU_Make/">GNU Make</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/CMake/">CMake</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/LaTeX/">LaTeX</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Docker/">Docker</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/Scoop/">Scoop</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/workflow/">日常学习工作流</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/tools/">实用工具箱</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/thesis/">毕业论文</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%BF%85%E5%AD%A6%E5%B7%A5%E5%85%B7/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/">信息检索</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../%E5%A5%BD%E4%B9%A6%E6%8E%A8%E8%8D%90/">好书推荐</a>
+  </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">数学基础</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/MITmaths/">MIT18.01/18.02: Calculus</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/MITLA/">MIT18.06: Linear Algebra</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E5%9F%BA%E7%A1%80/information/">MIT6.050J: Information theory and Entropy</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">数学进阶</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/CS70/">UCB CS70: discrete Math and probability theory</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/CS126/">UCB CS126: probability theory</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/6.042J/">MIT 6.042J: Mathematics for Computer Science</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/numerical/">MIT18.330: Introduction to numerical analysis</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/convex/">Standford EE364A: Convex Optimization</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E5%AD%A6%E8%BF%9B%E9%98%B6/The_Information_Theory_Pattern_Recognition_and_Neural_Networks/">The Information Theory, Pattern Recognition, and Neural Networks</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">编程入门</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/MIT-Missing-Semester/">MIT-Missing-Semester</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/DeCal/">Sysadmin DeCal</a>
+  </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">Python 语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Python/CS61A/">UCB CS61A: Structure and Interpretation of Computer Programs</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Python/CS50P/">CS50P: CS50's Introduction to Programming with Python</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">C 语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/C/CS50/">Harvard CS50: This is CS50x</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/C/Duke-Coursera-Intro-C/">Duke University: Introductory C Programming Specialization</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">C++ 语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/AUT1400/">AmirKabir University of Technology AP1400-2: Advanced Programming</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106L/">Stanford CS106L: Standard C++ Programming</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/cpp/CS106B_CS106X/">Stanford CS106B/X</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">Java 语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Java/MIT%206.092/">MIT 6.092: Introduction To Programming In Java</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">Rust 语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Rust/CS110L/">Stanford CS110L: Safety in Systems Programming</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Rust/cs431/">KAIST CS431: Concurrent Programming</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l3 label">
+    <p class="caption">函数式语言</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l3 group">
+      <ul class="navtree subnav-l3 current">
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Functional/CS3110/">Cornell CS3110: OCaml Programming Correct + Efficient + Beautiful</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l4 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8/Functional/Haskell-MOOC/">Haskell MOOC</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">电子基础</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/EE16/">EE16A&B: Designing Information Devices and Systems I&II</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/signal/">UCB EE120 : Signal and Systems</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%94%B5%E5%AD%90%E5%9F%BA%E7%A1%80/Signals_and_Systems_AVO/">MIT 6.007 Signals and Systems</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">数据结构与算法</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/CS61B/">UCB CS61B: Data Structures and Algorithms</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Algo/">Coursera: Algorithms I & II</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/6.006/">MIT 6.006: Introduction to Algorithms</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/6.046/">MIT 6.046: Design and Analysis of Algorithms</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/CS170/">UCB CS170: Efficient Algorithms and Intractable Problems</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">软件工程</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/6031/">MIT 6.031: Software Construction</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/CS169/">UCB CS169: software engineering</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/17803/">CMU 17-803: Empirical Methods</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">计算机系统基础</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/CSAPP/">CMU 15-213: CSAPP</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/CS110/">Stanford CS110: Principles of Computer Systems</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">体系结构</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/N2T/">Coursera: Nand2Tetris</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/CS61C/">UCB CS61C: Great Ideas in Computer Architecture</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/DDCA/">ETHz: Digital Design and Computer Architecture</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/CA/">ETHz: Computer Architecture</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">操作系统</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../MIT6.S081/">MIT 6.S081: Operating System Engineering</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../CS162/">UCB CS162: Operating System</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../NJUOS/">NJU OS: Operating System Design and Implementation</a>
+  </li>
+        
+          
+
+
+  
+    
+    <li class="navtree toctree-l3 page current">
+      <a class="current" href="./">
+        HIT OS: Operating System
+      </a>
+    </li>
+    
+      
+
+  <li class="toctree-l3 current with-children">
+    <a href="#hit-os-operating-system">
+      HIT OS: Operating System
+      <span class="toctree-expand"></span>
+    </a>
+  </li>
+
+
+
+  <li class="toctree-l3 current">
+    <ul class="subnav-l3 current">
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#_1">课程简介</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#_2">课程资源</a>
+        </li>
+    
+      
+        <li class="toctree-l4">
+          <a class="toctree-l5" href="#_3">资源汇总</a>
+        </li>
+    
+    </ul>
+  </li>
+
+
+  
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">并行与分布式系统</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/CS149/">CMU 15-418/Stanford CS149: Parallel Computing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/MIT6.824/">MIT 6.824: Distributed System</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">计算机系统安全</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/CS161/">UCB CS161: Computer Security</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/MIT6.1600/">MIT 6.1600: Foundations of Computer Security</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/MIT6.858/">MIT 6.858: Computer System Security</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/CSE365/">ASU CSE365: Introduction to Cybersecurity</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/CSE466/">ASU CSE466: Computer Systems Security</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8/SEEDLabs/">SU SEED Labs</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">计算机网络</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/topdown_ustc/">USTC Computer Networking:A Top-Down Approach</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/topdown/">Computer Networking: A Top-Down Approach</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CS144/">Stanford CS144: Computer Network</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">数据库系统</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/CS186/">UCB CS186: Introduction to Database System</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/15445/">CMU 15-445: Database Systems</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/CS122/">Caltech CS122: Database System Implementation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/CS346/">Stanford CS346: Database System Implementation</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F/15799/">CMU 15-799: Special Topics in Database Systems</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">编译原理</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/PKU-Compilers/">PKU 编译原理实践</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/CS143/">Stanford CS143: Compilers</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/NJU-Compilers/">NJU 编译原理</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">编程语言设计与分析</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/CS242/">Stanford CS242: Programming Languages</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/NJU-SoftwareAnalysis/">NJU 软件分析</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/PKU-SoftwareAnalysis/">PKU 软件分析</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/Cambridge-Semantics/">Cambridge: Semantics of Programming Languages</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">计算机图形学</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES101/">GAMES101</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES202/">GAMES202</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES103/">GAMES103</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CS148/">Stanford CS148</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/15462/">CMU 15-462</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/USTC%20ComputerGraphics/">USTC CG</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">Web开发</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../Web%E5%BC%80%E5%8F%91/mitweb/">MIT web development course</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../Web%E5%BC%80%E5%8F%91/CS142/">Stanford CS142: Web Applications</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../Web%E5%BC%80%E5%8F%91/fullstackopen/">University of Helsinki: Full Stack open 2022</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../Web%E5%BC%80%E5%8F%91/CS571/">CS571 Building UI (React & React Native)</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">数据科学</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6/Data100/">UCB Data100: Principles and Techniques of Data Science</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">人工智能</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/CS50/">Harvard CS50's Introduction to AI with Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/CS188/">UCB CS188: Introduction to Artificial Intelligence</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">机器学习</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/ML/">Coursera: Machine Learning</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/CS229/">Stanford CS229: Machine Learning</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/CS189/">UCB CS189: Introduction to Machine Learning</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">机器学习系统</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/AICS/">智能计算系统</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/CMU10-414/">CMU 10-414/714: Deep Learning Systems</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%B3%BB%E7%BB%9F/MLC/">Machine Learning Compilation</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">深度学习</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/EECS498-007/">UMich EECS 498-007 / 598-005: Deep Learning for Computer Vision</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CS230/">Coursera: Deep Learning</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/LHY/">国立台湾大学: 李宏毅机器学习</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CS231/">Stanford CS231n: CNN for Visual Recognition</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CS224n/">Stanford CS224n: Natural Language Processing</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CS224w/">Stanford CS224w: Machine Learning with Graphs</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/CS285/">UCB CS285: Deep Reinforcement Learning</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+          
+  <li class="navtree toctree-l2 label">
+    <p class="caption">机器学习进阶</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l2 group">
+      <ul class="navtree subnav-l2 current">
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/roadmap/">进阶路线图</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/CMU10-708/">CMU 10-708: Probabilistic Graphical Models</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/STAT8201/">Columbia STAT 8201: Deep Generative Models</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/STA4273/">U Toronto STA 4273 Winter 2021: Minimizing Expectations</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l3 inactive">
+    <a class="" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/CS229M/">Stanford STATS214 / CS229M: Machine Learning Theory</a>
+  </li>
+        
+      </ul>
+    </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../经济学/">经济学</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../哲学/">哲学</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../艺术学/">艺术学</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../文学/">文学</a>
+  </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../农学/">农学</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">通识自学指南(CS版)</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>操作系统 &raquo;</li>
+        
+      
+        
+          <li>Home &raquo;</li>
+        
+      
+    
+    <li>HIT OS: Operating System</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/OpenFAFU/CSLiberal/edit/master/docs/操作系统/HITOS.md"> Edit on CSLiberal</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="hit-os-operating-system">HIT OS: Operating System</h1>
+<h2 id="_1">课程简介</h2>
+<ul>
+<li>所属大学：哈尔滨工业大学</li>
+<li>先修要求：C 语言</li>
+<li>编程语言：C 语言、汇编</li>
+<li>课程难度：🌟🌟🌟🌟</li>
+<li>预计学时：100 小时+</li>
+</ul>
+<p>如果你在知乎上搜索“操作系统如何自学”、“操作系统的公开课推荐”、“有哪些让你相见恨晚的计算机课程”等问题，哈工大李治军老师的操作系统课程大概率都会在某条高赞回答的推荐里。这是一门知名度较高、颇受欢迎的中文计算机课程。</p>
+<p>这门课善于站在学生角度循循善诱。例如，课程从“弱弱地问，什么是操作系统”来“揭开操作系统钢琴的盖子”，从 CPU 的直观管理引出进程概念，从“那就首先让程序进入内存”引出内存管理。</p>
+<p>这门课注重理论和实践相结合。操作系统是看得见摸得着的东西，李老师反复强调一定要做实验，如果只看视频纸上谈兵，是学不好操作系统的。课程基于实际的 Linux 0.11 源码（总代码量约两万行）进行讲解和实验，共有八个小实验，四个大实验。</p>
+<p>当然，这门课也有一些瑕不掩瑜的地方。例如，Linux 0.11 是很早期工业界的代码，不是为了教学而设计的。因此在实验过程中会有一些避不开的晦涩难懂的原生代码，但它们对理解操作系统其实并没有太大帮助。</p>
+<h2 id="_2">课程资源</h2>
+<ul>
+<li>课程网站：<a href="https://www.icourse163.org/course/HIT-1002531008">https://www.icourse163.org/course/HIT-1002531008</a></li>
+<li>课程视频：<a href="https://www.bilibili.com/video/BV19r4y1b7Aw/?p=1">https://www.bilibili.com/video/BV19r4y1b7Aw/?p=1</a></li>
+<li>课程教材一：<a href="https://book.douban.com/subject/1231236//">《Linux 内核完全注释》</a></li>
+<li>课程教材二：<a href="https://book.douban.com/subject/30391722/">《操作系统原理、实现与实践》</a></li>
+<li>课程作业：<a href="https://www.lanqiao.cn/courses/115">https://www.lanqiao.cn/courses/115</a></li>
+</ul>
+<h2 id="_3">资源汇总</h2>
+<p>@NaChen95 在学习这门课中的八个实验作业的原理分析和实现都汇总在 <a href="https://github.com/NaChen95/Linux0.11">NaChen95 / Linux0.11</a> 中。</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/CS149/" class="btn btn-neutral float-right" title="CMU 15-418/Stanford CS149: Parallel Computing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../NJUOS/" class="btn btn-neutral" title="NJU OS: Operating System Design and Implementation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../NJUOS/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../%E5%B9%B6%E8%A1%8C%E4%B8%8E%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/CS149/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
